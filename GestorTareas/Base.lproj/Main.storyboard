@@ -50,7 +50,7 @@
                                 <connections>
                                     <outlet property="imgTask" destination="Umx-tz-CtB" id="wGG-Tl-iBF"/>
                                     <outlet property="lblTask" destination="Ymk-1v-miY" id="c5b-hj-4rV"/>
-                                    <segue destination="XfC-tH-wr8" kind="show" id="R0m-qN-dAT"/>
+                                    <segue destination="XfC-tH-wr8" kind="show" identifier="detailSegue" id="R0m-qN-dAT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -60,6 +60,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Remember" id="Tjp-st-pvR">
+                        <barButtonItem key="backBarButtonItem" title=" " id="TNZ-XQ-9Bh"/>
                         <barButtonItem key="rightBarButtonItem" image="icon-add" id="NUA-CP-gai">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -72,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1324" y="129.98500749625188"/>
         </scene>
-        <!--Icons View Controller-->
+        <!--Remember-->
         <scene sceneID="6cI-o7-Wyv">
             <objects>
-                <collectionViewController id="XfC-tH-wr8" customClass="IconsViewController" customModule="GestorTareas" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Remember" id="XfC-tH-wr8" customClass="IconsViewController" customModule="GestorTareas" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="As7-Gh-ynG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,6 +163,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vGu-h5-2Vz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

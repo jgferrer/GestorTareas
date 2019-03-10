@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IconsViewController: UICollectionViewController {
+class IconsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var iconList: [[String: String]] = [[String: String]]()
     var headerTitleString: String?
@@ -60,5 +60,12 @@ class IconsViewController: UICollectionViewController {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let maxWidth = collectionView.frame.size.width / 3.5
+        return CGSize(width: maxWidth, height: maxWidth)
+    }
+    
+    
     
 }
