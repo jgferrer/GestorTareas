@@ -56,4 +56,21 @@ class ListViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let complete = UITableViewRowAction(style: .normal, title: "Completar") { (action, indexPath) in
+            self.taskManager.tasks.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+        
+        complete.backgroundColor = #colorLiteral(red: 0.4980392157, green: 0.5098039216, blue: 0.8509803922, alpha: 1)
+        
+        return [complete]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
 }
