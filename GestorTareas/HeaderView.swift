@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  HeaderView.swift
 //  GestorTareas
 //
 //  Created by Jose Gabriel Ferrer on 10/03/2019.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
-
-    @IBAction func addTask(_ sender: UIBarButtonItem) {
-    }
+class HeaderView: UICollectionReusableView {
     
+    @IBOutlet weak var taskName: UILabel!
     
 }

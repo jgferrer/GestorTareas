@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6518379E223559210093816A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518379D223559210093816A /* TaskCell.swift */; };
+		651837A02235594F0093816A /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6518379F2235594F0093816A /* IconCell.swift */; };
+		651837A22235596D0093816A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651837A12235596D0093816A /* HeaderView.swift */; };
+		651837A422355B410093816A /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651837A322355B410093816A /* IconsViewController.swift */; };
 		65A22D49223513FF0082606B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A22D48223513FF0082606B /* AppDelegate.swift */; };
 		65A22D4E223513FF0082606B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A22D4C223513FF0082606B /* Main.storyboard */; };
 		65A22D53223514020082606B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A22D51223514020082606B /* LaunchScreen.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6518379D223559210093816A /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		6518379F2235594F0093816A /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
+		651837A12235596D0093816A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		651837A322355B410093816A /* IconsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
 		65A22D45223513FF0082606B /* GestorTareas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestorTareas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A22D48223513FF0082606B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A22D4D223513FF0082606B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				65A22D48223513FF0082606B /* AppDelegate.swift */,
+				651837A12235596D0093816A /* HeaderView.swift */,
+				651837A322355B410093816A /* IconsViewController.swift */,
+				6518379D223559210093816A /* TaskCell.swift */,
+				6518379F2235594F0093816A /* IconCell.swift */,
 				65A22D5A223514890082606B /* Assets.xcassets */,
 				65A22D4C223513FF0082606B /* Main.storyboard */,
 				65A22D51223514020082606B /* LaunchScreen.storyboard */,
@@ -135,7 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651837A22235596D0093816A /* HeaderView.swift in Sources */,
+				651837A422355B410093816A /* IconsViewController.swift in Sources */,
 				65A22D5D223516450082606B /* ListViewController.swift in Sources */,
+				6518379E223559210093816A /* TaskCell.swift in Sources */,
+				651837A02235594F0093816A /* IconCell.swift in Sources */,
 				65A22D49223513FF0082606B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HUR635N2P;
 				INFOPLIST_FILE = GestorTareas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HUR635N2P;
 				INFOPLIST_FILE = GestorTareas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

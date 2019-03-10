@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  TaskCell.swift
 //  GestorTareas
 //
 //  Created by Jose Gabriel Ferrer on 10/03/2019.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
+class TaskCell: UITableViewCell {
 
-    @IBAction func addTask(_ sender: UIBarButtonItem) {
-    }
-    
+    @IBOutlet weak var imgTask: UIImageView!
+    @IBOutlet weak var lblTask: UILabel!
     
 }

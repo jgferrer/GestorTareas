@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="7DY-I6-1as">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="80" id="7DY-I6-1as" customClass="TaskCell" customModule="GestorTareas" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7DY-I6-1as" id="MDm-UD-vlL">
@@ -49,6 +48,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgTask" destination="Umx-tz-CtB" id="wGG-Tl-iBF"/>
+                                    <outlet property="lblTask" destination="Ymk-1v-miY" id="c5b-hj-4rV"/>
                                     <segue destination="XfC-tH-wr8" kind="show" id="R0m-qN-dAT"/>
                                 </connections>
                             </tableViewCell>
@@ -61,6 +62,9 @@
                     <navigationItem key="navigationItem" title="Remember" id="Tjp-st-pvR">
                         <barButtonItem key="rightBarButtonItem" image="icon-add" id="NUA-CP-gai">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addTask:" destination="GdS-Pc-igc" id="47m-ev-YA6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -68,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="1324" y="129.98500749625188"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Icons View Controller-->
         <scene sceneID="6cI-o7-Wyv">
             <objects>
-                <collectionViewController id="XfC-tH-wr8" sceneMemberID="viewController">
+                <collectionViewController id="XfC-tH-wr8" customClass="IconsViewController" customModule="GestorTareas" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="As7-Gh-ynG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +87,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x32-Rm-6Zr">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellIdentifier" id="x32-Rm-6Zr" customClass="IconCell" customModule="GestorTareas" customModuleProvider="target">
                                 <rect key="frame" x="10" y="90" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -112,9 +116,13 @@
                                     <constraint firstItem="Uz7-aD-M7U" firstAttribute="top" secondItem="x32-Rm-6Zr" secondAttribute="top" constant="10" id="eTY-dp-27m"/>
                                     <constraint firstAttribute="trailing" secondItem="QWN-wJ-odj" secondAttribute="trailing" constant="10" id="ifX-no-p9E"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="Uz7-aD-M7U" id="u3A-aa-lhW"/>
+                                    <outlet property="title" destination="QWN-wJ-odj" id="92z-OZ-6lT"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Stg-Ei-AxO">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderIdentifier" id="Stg-Ei-AxO" customClass="HeaderView" customModule="GestorTareas" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -132,6 +140,9 @@
                                 <constraint firstAttribute="trailing" secondItem="S5a-Oe-H2n" secondAttribute="trailing" constant="36" id="kN7-yu-8Jo"/>
                                 <constraint firstAttribute="bottom" secondItem="S5a-Oe-H2n" secondAttribute="bottom" constant="20" id="tE7-uy-FsI"/>
                             </constraints>
+                            <connections>
+                                <outlet property="taskName" destination="S5a-Oe-H2n" id="2GK-bW-46c"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="XfC-tH-wr8" id="yfr-AU-2Pn"/>

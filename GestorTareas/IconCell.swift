@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  IconCell.swift
 //  GestorTareas
 //
 //  Created by Jose Gabriel Ferrer on 10/03/2019.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
-
-    @IBAction func addTask(_ sender: UIBarButtonItem) {
-    }
+class IconCell: UICollectionViewCell {
     
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var title: UILabel!
     
 }
